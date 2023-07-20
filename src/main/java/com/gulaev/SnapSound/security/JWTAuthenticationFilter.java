@@ -1,6 +1,5 @@
 package com.gulaev.SnapSound.security;
 
-import com.gulaev.SnapSound.entity.User;
 import com.gulaev.SnapSound.service.CustomUserDetailsService;
 import java.io.IOException;
 import java.util.Collections;
@@ -13,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -26,7 +24,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
   private JWTTokenProvider jwtTokenProvider;
   @Autowired
   private CustomUserDetailsService customUserDetailsService;
-  public static final Logger log = LoggerFactory.getLogger(JWTTokenProvider.class);
+  public static final Logger log = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
 
 
   @Override
