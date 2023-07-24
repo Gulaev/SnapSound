@@ -12,5 +12,4 @@ public class InvalidLoginResponse {
     this.username = "Invalid Username";
     this.password = "Invalid Password";
   }
-
 }

@@ -8,7 +8,7 @@ import javax.validation.ConstraintValidatorContext;
 
 public class EmailValidator implements ConstraintValidator<ValidEmail, String> {
 
-    public static final String EMAIL_PATTERN = "^(?i)[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[a-z]{2,}$\n";
+  public static final String EMAIL_PATTERN = "^(?i)[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$";
 
   @Override
   public void initialize(ValidEmail constraintAnnotation) {
