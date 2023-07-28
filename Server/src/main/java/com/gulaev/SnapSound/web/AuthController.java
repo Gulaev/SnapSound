@@ -1,6 +1,5 @@
 package com.gulaev.SnapSound.web;
 
-
 import com.gulaev.SnapSound.payload.request.LoginRequest;
 import com.gulaev.SnapSound.payload.request.SignupRequest;
 import com.gulaev.SnapSound.payload.response.JWTTokenSuccessResponse;
@@ -46,7 +45,6 @@ public class AuthController {
     this.responseErrorValidation = responseErrorValidation;
     this.userService = userService;
   }
-
   @PostMapping("/signin")
   public ResponseEntity<Object> authenticateUser(@Valid @RequestBody LoginRequest loginRequest, BindingResult bindingResult) {
     ResponseEntity<Object> errors = responseErrorValidation.mapValidationService(bindingResult);
@@ -57,7 +55,7 @@ public class AuthController {
 
     SecurityContextHolder.getContext().setAuthentication(authentication);
     String jwt = SecurityConstant.TOKEN_PREFIX + jwtTokenProvider.generateToken(authentication);
-    return ResponseEntity.ok(new JWTTokenSuccessResponse(true, jwt ));
+    return ResponseEntity.ok(new JWTTokenSuccessResponse(true, jwt));
   }
 
   @PostMapping("/signup")

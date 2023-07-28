@@ -10,7 +10,8 @@ export class NotificationService {
 
   public showSnackBar(message: string): void {
     this.snackbar.open(message, 'Undo', {
-      duration: 2000
+      duration: 2000,
+      panelClass: ['black-snackbar']
     });
   }
 }
