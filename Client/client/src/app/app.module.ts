@@ -13,13 +13,18 @@ import {authErrorInterceptorProviders} from "./helper/error-interceptor.service"
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NavigationComponent } from './layout/navigation/navigation.component';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from "@angular/material/form-field";
+import { IndexComponent } from './layout/index/index.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavigationComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -36,3 +41,4 @@ import { AppRoutingModule } from './app-routing.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

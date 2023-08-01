@@ -1,0 +1,15 @@
+/*.user-name {*/
+/*  display: flex;*/
+/*  justify-content: flex-end;*/
+/*  margin-left: auto;*/
+/*}*/
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+#menu-item button {
+  display: block;
+  margin: 0 auto;
+}
+

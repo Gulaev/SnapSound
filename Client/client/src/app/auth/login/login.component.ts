@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
 import {AuthService} from "../../service/auth.service";
 import {TokenStorageService} from "../../service/token-storage.service";
 import {NotificationService} from "../../service/notification.service";
 import {Router} from "@angular/router";
 import {FormBuilder, FormGroup, Validator, Validators} from "@angular/forms";
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from "@angular/material/form-field";
 
 @Component({
   selector: 'app-login',
@@ -51,9 +52,9 @@ export class LoginComponent implements OnInit{
           window.location.reload()
         }, error => {
           console.log(error)
-        this.notification.showSnackBar(error.message)
+        this.notification.showSnackBar(error.getMessage())
       }
     )
   }
-
 }
+
